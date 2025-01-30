@@ -1,14 +1,13 @@
-<h1> Active Directory Lab</h1>
+<h1> Analayzing HTTP Traffic with Wireshark LAB</h1>
 
 <h2>Description</h2>
-This guide walks you through setting up an Active Directory home lab environment using Oracle Virtualbox. This lab will help you develop a deeper understanding of active directory and windows networking.
+This guide walks you through analyzing HTTP traffic with wireshark. 
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Oracle Vault</b>
+- <b>Wireshark</b> 
 
 <h2>Environments Used </h2>
 
@@ -17,32 +16,33 @@ This guide walks you through setting up an Active Directory home lab environment
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Launch Wireshark and capture HTTP Traffic. Once open select the network that connects to the internet then click the start capture button (Blue Icon) Open a web browser and enter a website that uses HTTP. Once the page loads stop the capture on wireshark (Red Icon). Once this is done successfully you will now a have a capture filec that contains network traffic as well as the HTTP responses and requests <br/>
+
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Next, in order to view the HTTP traffic you will see a filter bar at the top. Type http in the filter box and press enter. Once done you will only see HTTP Traffic from the capture since it has been filtered. <br/>
+
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+At this point you are now ready to analyze the HTTP requests. The first step here is locating an HTTP "GET" request once located click the GET REQUEST to view the details in the packet pane (Bottom left). Expand the HTTP (HYPERTEXT TRANSFER PROTOCOL) section and view the detailed information about the request.
+<br/>
+
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Next is to anaylze the HTTP responses. In the filtered HTTP traffic locate HTTP Response for the GET request. Click on the response to view the details in the packet pane. Again we are going to expand the HTTP (HYPERTEXT TRANSFER PROTOCOL) section to see the detailed information about the response. You can view the content type, headers, and status code.  <br/>
+
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+To extract and examine the payload data navigate back to the HTTP response details and right click on the response packet select Follow then select TCP stream to view everything going on. Examine the payload data in the TCP stream window to analyze the content being transferred.  <br/>
+
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Finally once this has been finished you will have an understanding on how to capture, filter, and analyze HTTP traffic by using Wireshark. It is not adviseable to share this information with a third party if the capture was done via your wifi network as it contains sensitive details that can be mishandled.  <br/>
+
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <br/>
+ 
 </p>
 
 <!--
