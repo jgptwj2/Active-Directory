@@ -1,4 +1,4 @@
-<h1> Analayzing HTTP Traffic with Wireshark LAB</h1>
+<h1> Analyzing HTTP Traffic with Wireshark LAB</h1>
 
 <h2>Description</h2>
 This guide walks you through analyzing HTTP traffic with wireshark. 
